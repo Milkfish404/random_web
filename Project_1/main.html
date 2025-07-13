@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+        :root{
+            --font-color: rgb(190, 190, 190);
+        }
+        
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1)
+            , rgba(0, 0, 0, 0.6)), 
+            url('images/View.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+            background-attachment: fixed;
+        }
+        ::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+        /*=============NAV-SECTION=============*/
+        .bx-menu{
+            display: none;
+        }
+        nav{
+            color: white;
+            font-family: 'poppins';
+            padding: 60px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #breeze{
+            font-weight: 200;
+            font-size: 3rem;
+            cursor: pointer;
+            animation: fadein 1s ease-in-out forwards;
+        }
+        @keyframes fadein {
+            from{
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        ul{
+            opacity: 0;
+            padding: 10px;
+            display: flex;
+            list-style: none;
+            animation: fadein 1s ease-in-out .4s forwards
+        }
+        li{
+            padding: 0px 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--font-color)
+        }
+        li:hover{
+            transition: 0.2s ease-out;
+            color: white;
+        }
+        /*=======SECTION-1================*/
+        h1{
+            font-family: 'poppins';
+            font-size: clamp(3rem, 4vw, 4vw);
+            font-weight: 200;
+            color: white;
+        }
+        #section-1{
+            opacity: 0;
+            padding: 40px;
+            margin-top: 250px;
+            animation: fadein 1s ease-in-out 0.4s forwards; 
+        }
+        #year{
+            color: rgb(255, 255, 255);
+            font-size: clamp(1.4rem, 2vw, 2vw);
+            font-family: 'poppins';
+            font-weight: 200;
+        }
+        .flex{
+            display: flex;
+        }
+        #learn-more{
+            width: 20rem;
+            margin-left: 90px;
+            border-radius: 10px;
+            border: 1px transparent;
+            font-family: 'poppins';
+            font-size: 17px;
+            font-weight: 400;
+            height: 6vmin;
+        }
+        .bx-right-arrow-alt{
+            margin-left: 20px;
+        }
+        #learn-more:hover{
+            transition: 0.4s ease-out;
+            background-color: black;
+            color: white;
+            margin-left: 100px;
+        }
+        @media (max-width: 768px) {
+            #section-1{
+                justify-self: center;
+                margin-top: 100px;
+                overflow-wrap: break-word;
+                word-break: break-word;
+            }
+            ul{
+                display: none;
+            }
+            .bx-menu{
+                display: contents;
+            }
+            .flex{
+                margin-top: 80px;
+            }
+            #sentence{
+                font-size: 3rem;
+            }
+            #learn-more{
+                font-size: 1rem;
+                height: 3rem;
+                margin-left: 14vmin;
+            }
+            #year{
+                font-size: 1.4rem;
+            }
+        }
+        @media (max-width: 425px) {
+            #breeze{
+                font-size: 8vw;
+            }
+            #sentence{
+                font-size: 10vw;
+            }
+            #learn-more{
+                margin: 0px;
+            }
+            #year{
+                font-size: 6vw;
+            }
+            #learn-more{
+                height: 15vw;
+                width: 60vw;
+            }
+            .flex{
+                gap: 60px;
+                flex-direction: column;
+            }
+        }
+    </style>
+    <title>Hello</title>
+</head>
+<body>
+    <nav id="nav-bar">
+        <h1 id="breeze">AzureBreec</h1>
+        <ul>
+            <li id="rooms"><i class='bx bx-bed'></i>ROOMS</li>
+            <li id="dining"><i class="fas fa-utensils"></i></i>DINING</li>
+            <li id="about"><i class='bx bx-info-circle'></i></i>ABOUT</li>
+        </ul>
+        <i class='bx bx-menu' style="font-size: 2rem;"></i>
+    </nav>
+    <section id="section-1">
+        <h1 id="sentence">Transforming spaces, <br> Enhancing views</h1>
+        <div class="flex">
+            <p id="year">Created since 1961</p>
+            <button id="learn-more">Learn more <i class='bx bx-right-arrow-alt'></i></button>
+        </div>
+    </section>
+    <script src="script.js">
+    </script>
+</body>
+</html>
